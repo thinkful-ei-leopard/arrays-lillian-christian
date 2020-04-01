@@ -41,3 +41,17 @@
 // console.log(filter([4, 6, -3, 5, -2, 1]));
 
 //7
+
+function maxSum(arr){
+    let max = arr[0];
+    for (let i = 1; i <= arr.length; i++) {
+        for (let j = 0; j < arr.length; i++) {
+            const sum = arr.slice(j, i + j).reduce((sum, num) => sum += num);
+            if (sum > max) {
+                max = sum;
+            }
+        }
+    }
+    return max;
+}
+console.log(maxSum([4, 6, -3, 5, -2, 1]));
