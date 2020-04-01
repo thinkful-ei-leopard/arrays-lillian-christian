@@ -99,36 +99,48 @@
 
 //11
 
-function twoD(arr) {
-    let outputArray = arr;
-    let columns = [];
-    let rows = [];
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr[0].length; j++) {
-            if (arr[i][j] === 0) {
-            rows.push(i);
-            columns.push(j);
+// function twoD(arr) {
+//     let outputArray = arr;
+//     let columns = [];
+//     let rows = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         for (let j = 0; j < arr[0].length; j++) {
+//             if (arr[i][j] === 0) {
+//             rows.push(i);
+//             columns.push(j);
+//         }
+//     }
+// }
+
+// rows.forEach(row => {
+//     for(let i = 0; i < outputArray[0].length; i++) {
+//         outputArray[row][i] = 0;
+//     }
+// })
+// columns.forEach(column => {
+//     for(let i = 0; i < outputArray.length; i++) {
+//         outputArray[i][column] = 0;
+//     }
+// })
+// return outputArray
+// }
+
+// console.log(twoD([
+//     [1,0,1,1,0],
+//     [0,1,1,1,0],
+//     [1,1,1,1,1],
+//     [1,0,1,1,1],
+//     [1,1,1,1,1]]))
+
+//12
+
+function strRot(str1, str2) {
+    for(let i = 0; i < str2.length; i++) {
+        str2 = str2.slice(1) + str2[0];
+        if (str1 === str2) {
+            return true;
         }
     }
+    return false;
 }
-
-rows.forEach(row => {
-    for(let i = 0; i < outputArray[0].length; i++) {
-        outputArray[row][i] = 0;
-    }
-})
-columns.forEach(column => {
-    for(let i = 0; i < outputArray.length; i++) {
-        outputArray[i][column] = 0;
-    }
-})
-return outputArray
-}
-
-console.log(twoD([
-    [1,0,1,1,0],
-    [0,1,1,1,0],
-    [1,1,1,1,1],
-    [1,0,1,1,1],
-    [1,1,1,1,1]]))
-
+console.log(strRot('amazon', 'zonama'))
