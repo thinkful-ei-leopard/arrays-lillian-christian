@@ -66,15 +66,33 @@
 
 //9
 
-function removeChar(str){
-  let noVowels = '';
-  for(let i = 0; i < str.length; i++){
-    if(str[i] !== 'a' && str[i] !== 'e' && str[i] !== 'i' && str[i] !== 'o' && str[i] !== 'u') {
-      noVowels += str[i];
+// function removeChar(str){
+//   let noVowels = '';
+//   for(let i = 0; i < str.length; i++){
+//     if(str[i] !== 'a' && str[i] !== 'e' && str[i] !== 'i' && str[i] !== 'o' && str[i] !== 'u') {
+//       noVowels += str[i];
+//     }
+//   }
+//   return noVowels;
+// }
+
+// console.log(removeChar('Battle of the Vowels: Hawaii vs. Grozny'));
+
+
+//10
+
+function products(arr) {
+  let products = [];
+  for(let i = 0; i < arr.length; i++){
+    let x = 1;
+    for(let j = 0; j < arr.length; j++){
+      if (j !== i){
+        x = x * arr[j];
+      }
     }
+    products.push(x);
   }
-  return noVowels;
+  return products;
 }
 
-console.log(removeChar('Battle of the Vowels: Hawaii vs. Grozny'));
-
+console.log(products([1, 3, 9, 4]));
