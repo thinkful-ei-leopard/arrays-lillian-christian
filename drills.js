@@ -42,16 +42,29 @@
 
 //7
 
-function maxSum(arr){
-    let max = arr[0];
-    for (let i = 1; i <= arr.length; i++) {
-        for (let j = 0; j < arr.length; i++) {
-            const sum = arr.slice(j, i + j).reduce((sum, num) => sum += num);
-            if (sum > max) {
-                max = sum;
-            }
-        }
-    }
-    return max;
-}
-console.log(maxSum([4, 6, -3, 5, -2, 1]));
+// function maxSum(arr){
+//     let max = arr[0];
+//     for (let i = 1; i <= arr.length; i++) {
+//         for (let j = 0; j < arr.length; i++) {
+//             const sum = arr.slice(j, i + j).reduce((sum, num) => sum += num);
+//             if (sum > max) {
+//                 max = sum;
+//             }
+//         }
+//     }
+//     return max;
+// }
+// console.log(maxSum([4, 6, -3, 5, -2, 1]));
+
+//8 
+
+// function merge(arr1, arr2) {
+//   let result = [...arr1, ...arr2];
+//   return result.sort((a, b) => a-b);
+// }
+// console.log(merge([1, 3, 6, 8, 11], [2, 3, 5, 8, 9, 10]))
+
+//9
+
+function removeChar
+
