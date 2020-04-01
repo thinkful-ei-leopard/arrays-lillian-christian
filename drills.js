@@ -15,10 +15,29 @@
 
 //5
 
-function urlify(str){
-  const splitStr = str.split(' ');
-  const url = splitStr.join('%20');
-  return url;
-}
+// function urlify(str){
+//   const splitStr = str.split(' ');
+//   const url = splitStr.join('%20');
+//   return url;
+// }
 
-console.log(urlify('tauhida parveen'));
+// console.log(urlify('tauhida parveen'));
+
+//6
+
+// function filter(arr) {
+//   if (arr.length === 0){
+//     return 'empty array';
+//   }
+//   let filteredArr = [];
+//   for(let i = 0; i < arr.length; i++){
+//     if (arr[i] >= 5) {
+//       filteredArr = [...filteredArr, arr[i]];
+//     }
+//   }
+//   return filteredArr;
+// }
+
+// console.log(filter([4, 6, -3, 5, -2, 1]));
+
+//7
