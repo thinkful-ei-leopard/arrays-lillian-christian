@@ -1,3 +1,4 @@
+'use strict';
 // 2.1
 // Array { length: 1, _capacity: 3, ptr: 0 }
 
@@ -13,3 +14,11 @@
 //resize function increases the size and memory so the array is moved to its proper place; is also a provate function (_)
 
 //5
+
+function urlify(str){
+  const splitStr = str.split(' ');
+  const url = splitStr.join('%20');
+  return url;
+}
+
+console.log(urlify('tauhida parveen'));
