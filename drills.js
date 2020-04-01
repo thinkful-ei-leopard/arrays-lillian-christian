@@ -81,18 +81,54 @@
 
 //10
 
-function products(arr) {
-  let products = [];
-  for(let i = 0; i < arr.length; i++){
-    let x = 1;
-    for(let j = 0; j < arr.length; j++){
-      if (j !== i){
-        x = x * arr[j];
-      }
+// function products(arr) {
+//   let products = [];
+//   for(let i = 0; i < arr.length; i++){
+//     let x = 1;
+//     for(let j = 0; j < arr.length; j++){
+//       if (j !== i){
+//         x = x * arr[j];
+//       }
+//     }
+//     products.push(x);
+//   }
+//   return products;
+// }
+
+// console.log(products([1, 3, 9, 4]));
+
+//11
+
+function twoD(arr) {
+    let outputArray = arr;
+    let columns = [];
+    let rows = [];
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[0].length; j++) {
+            if (arr[i][j] === 0) {
+            rows.push(i);
+            columns.push(j);
+        }
     }
-    products.push(x);
-  }
-  return products;
 }
 
-console.log(products([1, 3, 9, 4]));
+rows.forEach(row => {
+    for(let i = 0; i < outputArray[0].length; i++) {
+        outputArray[row][i] = 0;
+    }
+})
+columns.forEach(column => {
+    for(let i = 0; i < outputArray.length; i++) {
+        outputArray[i][column] = 0;
+    }
+})
+return outputArray
+}
+
+console.log(twoD([
+    [1,0,1,1,0],
+    [0,1,1,1,0],
+    [1,1,1,1,1],
+    [1,0,1,1,1],
+    [1,1,1,1,1]]))
+
