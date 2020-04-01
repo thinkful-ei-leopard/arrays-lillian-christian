@@ -76,6 +76,6 @@ function main() {
   Array.SIZE_RATIO = 3;
   let arr = new Array();
   arr.push("tauhida")
-  console.log(arr[0]);
+  console.log(arr.get(0));
 }
 main();

@@ -8,5 +8,8 @@
 //Array { length: 3, _capacity: 12, ptr: 3 }
 
 //4 
-//undefined
-//resize function increases the size and memory so the array is moved to its proper place
+//prints: 5
+//NaN; b/c the memory class coerces numbers into decimals, but not strings
+//resize function increases the size and memory so the array is moved to its proper place; is also a provate function (_)
+
+//5
