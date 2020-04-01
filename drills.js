@@ -66,5 +66,15 @@
 
 //9
 
-function removeChar
+function removeChar(str){
+  let noVowels = '';
+  for(let i = 0; i < str.length; i++){
+    if(str[i] !== 'a' && str[i] !== 'e' && str[i] !== 'i' && str[i] !== 'o' && str[i] !== 'u') {
+      noVowels += str[i];
+    }
+  }
+  return noVowels;
+}
+
+console.log(removeChar('Battle of the Vowels: Hawaii vs. Grozny'));
 
